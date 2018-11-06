@@ -11,8 +11,8 @@ class LeapYearTest {
     private final LeapYear leapYear = new LeapYear();
 
     @ParameterizedTest
-    @CsvSource({"1996, true, yearShouldBeLeapWhenDivisibleBy4"})
-    void yearShouldBeLeapWhenDivisibleBy4(int year, boolean shouldBeLeap, String description) {
+    @CsvSource({"1996, true, yearShouldBeLeapWhenDivisibleBy4", "2001, false, yearShouldBeCommonWhenNotDivisibleBy4"})
+    void test(int year, boolean shouldBeLeap, String description) {
         assertThat(leapYear.isLeap(year)).as(description).isEqualTo(shouldBeLeap);
     }
 
