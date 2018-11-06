@@ -9,7 +9,7 @@ class LeapYearTest {
     private final LeapYear leapYear = new LeapYear();
 
     @Test
-    void test() {
+    void yearShouldBeLeapWhenDivisibleBy4() {
         assertThat(leapYear.isLeap(1996)).isEqualTo(true);
     }
 
