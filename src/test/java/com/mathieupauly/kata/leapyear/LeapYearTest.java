@@ -18,4 +18,9 @@ class LeapYearTest {
         assertThat(leapYear.isLeap(2001)).isEqualTo(false);
     }
 
+    @Test
+    void test() {
+        assertThat(leapYear.isLeap(1900)).isEqualTo(false);
+    }
+
 }
