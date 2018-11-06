@@ -19,7 +19,7 @@ class LeapYearTest {
     }
 
     @Test
-    void test() {
+    void yearShouldBeAtypicallyCommonWhenDivisibleBy100() {
         assertThat(leapYear.isLeap(1900)).isEqualTo(false);
     }
 
