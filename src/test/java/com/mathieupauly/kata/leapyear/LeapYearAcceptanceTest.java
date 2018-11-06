@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class LeapYearTest {
+class LeapYearAcceptanceTest {
 
     private static final int ERA_IN_YEARS = 10_000;
     private static final double GREGORIAN_AVERAGE_YEAR_LENGTH_IN_DAYS = 365.2425;
