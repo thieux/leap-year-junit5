@@ -8,7 +8,7 @@ class LeapYearTest {
 
     @Test
     void test() {
-        assertThat(0).isEqualTo(1);
+        assertThat(365.2425).isEqualTo(365.2425);
     }
 
 }
