@@ -14,7 +14,7 @@ class LeapYearTest {
     }
 
     @Test
-    void yearShouldNotBeLeapWhenNotDivisibleBy4() {
+    void yearShouldBeCommonWhenNotDivisibleBy4() {
         assertThat(leapYear.isLeap(2001)).isEqualTo(false);
     }
 
