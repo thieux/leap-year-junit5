@@ -12,8 +12,10 @@ class LeapYearTest {
 
     @Test
     void delta_between_earth_revolution_and_basic_calendar_should_be_small() {
-        double eraInDays;
-        eraInDays = 365 * ERA_IN_YEARS;
+        double eraInDays = 0;
+        for (int i = 0; i < ERA_IN_YEARS; i++) {
+            eraInDays += 365;
+        }
         assertThat(eraInDays).isEqualTo(GREGORIAN_AVERAGE_YEAR_LENGTH_IN_DAYS * ERA_IN_YEARS,
                 Offset.offset(0.0001));
     }
