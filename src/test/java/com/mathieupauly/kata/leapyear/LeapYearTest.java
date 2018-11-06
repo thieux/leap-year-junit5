@@ -2,7 +2,7 @@ package com.mathieupauly.kata.leapyear;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,9 +11,9 @@ class LeapYearTest {
     private final LeapYear leapYear = new LeapYear();
 
     @ParameterizedTest
-    @ValueSource(ints = {1996})
-    void yearShouldBeLeapWhenDivisibleBy4(int year) {
-        assertThat(leapYear.isLeap(year)).isEqualTo(true);
+    @CsvSource({"1996, true"})
+    void yearShouldBeLeapWhenDivisibleBy4(int year, boolean shouldBeLeap) {
+        assertThat(leapYear.isLeap(year)).isEqualTo(shouldBeLeap);
     }
 
     @Test
